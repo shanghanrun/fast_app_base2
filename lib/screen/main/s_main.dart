@@ -18,7 +18,13 @@ class MainScreen extends StatefulWidget {
 class MainScreenState extends State<MainScreen>
     with SingleTickerProviderStateMixin, AfterLayoutMixin {
   TabItem _currentTab = TabItem.home;
-  final tabs = [TabItem.home, TabItem.favorite];
+  final tabs = [
+    TabItem.home,
+    TabItem.benefit,
+    TabItem.ttosspay,
+    TabItem.stock,
+    TabItem.all,
+  ];
   final List<GlobalKey<NavigatorState>> navigatorKeys = [];
 
   int get _currentIndex => tabs.indexOf(_currentTab);
@@ -31,9 +37,7 @@ class MainScreenState extends State<MainScreen>
   static double get bottomNavigationBarBorderRadius => 30.0;
 
   @override
-  FutureOr<void> afterFirstLayout(BuildContext context) async {
-    await login();
-    await loading();
+  FutureOr<void> afterFirstLayout(BuildContext context) {
     delay(() {
       FlutterNativeSplash.remove();
     }, 1500.ms);
