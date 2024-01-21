@@ -1,8 +1,9 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/round_button_theme.dart';
+import 'package:fast_app_base/common/widget/w_big_button.dart';
 import 'package:fast_app_base/common/widget/w_round_button.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
-import 'package:fast_app_base/screen/main/tab/home/w_app_bar.dart';
+import 'package:fast_app_base/screen/main/tab/home/w_ttos_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../../dialog/d_color_bottom.dart';
@@ -19,12 +20,19 @@ class HomeFragment extends StatelessWidget {
       color: Colors.black,
       child: Stack(
         children: [
-          const SingleChildScrollView(
-            child: Column(
-              children: [],
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 60),
+              child: Column(
+                children: [
+                  BigButton('토스뱅크', onTap: () {
+                    context.showSnackbar('토스뱅크를 눌렀어요.');
+                  })
+                ],
+              ).pSymmetric(h: 20),
             ),
           ),
-          TtossAppBar(),
+          const TtossAppBar(),
         ],
       ),
     );
