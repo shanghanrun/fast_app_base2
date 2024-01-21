@@ -25,6 +25,7 @@ class MainScreenState extends State<MainScreen>
     TabItem.stock,
     TabItem.all,
   ];
+  
   final List<GlobalKey<NavigatorState>> navigatorKeys = [];
 
   int get _currentIndex => tabs.indexOf(_currentTab);
