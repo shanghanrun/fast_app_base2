@@ -2,7 +2,7 @@ import 'package:fast_app_base/screen/main/tab/home/banks_dummy.dart';
 import 'package:fast_app_base/screen/main/tab/home/vo/vo_bank_account.dart';
 
 final bankAccountShinhan1 =
-    BankAccount(bankShinhan, 3000000, accountTypeName: '신한 주거래 우대통장(저축예금)');
+    BankAccount(bankShinhan, 3000000, accountTypeName: '신한주거래우대');
 final bankAccountShinhan2 =
     BankAccount(bankShinhan, 30000000, accountTypeName: '저축예금');
 final bankAccountShinhan3 =
